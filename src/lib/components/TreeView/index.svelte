@@ -1,15 +1,12 @@
 <script lang="ts">
-	import { createTreeView } from '@melt-ui/svelte';
 	import { setContext } from 'svelte';
-	import type { TreeItem } from './tree.svelte';
-	import Tree from './tree.svelte';
-	import type { DirectoryNode } from '$lib/types';
 	import { writable } from 'svelte/store';
-	import { getArchiveState } from '$lib/archive.svelte';
-
-	export let directoryTree: DirectoryNode[];
+	import { createTreeView } from '@melt-ui/svelte';
+	import { getArchiveState, type DirectoryNode } from '$lib/archive.svelte';
+	import Tree, { type TreeItem } from '$lib/components/TreeView/tree.svelte';
 
 	const archive = getArchiveState();
+	console.log('test tree index: ', archive);
 
 	function convertNodesIntoTreeItems(nodes: DirectoryNode[]): TreeItem[] {
 		const treeItems: TreeItem[] = nodes.map((node) => {
@@ -27,11 +24,11 @@
 		return treeItems;
 	}
 
-	$: treeItems = convertNodesIntoTreeItems(directoryTree);
+	$: treeItems = convertNodesIntoTreeItems(archive.directoryTree);
 
 	let expanded = writable<string[]>([]);
 
-	// Expand both folders by default. Not sure how to do this in a more idomatic way.
+	// Expand both folders by default. Not sure how to do this in a more idomatic way.$: expanded.set([
 	$: expanded.set([
 		`${treeItems[0].title}-0`,
 		`${treeItems[0].children ? treeItems[0].children[2].title + '-2' : ''}`

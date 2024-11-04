@@ -1,14 +1,17 @@
 <script lang="ts">
 	import { writable } from 'svelte/store';
-	import type { Source } from '$lib/types';
+	import { formatSumValue } from '$lib/utils';
+	import type { Source } from '$lib/archive.svelte';
 	import * as Table from '$lib/components/ui/table';
-	import { createTable, Render, Subscribe } from 'svelte-headless-table';
 	import { addGroupBy } from 'svelte-headless-table/plugins';
 	import FactCardField from '$lib/components/FactCardField.svelte';
-	import { formatSumValue } from '$lib/utils';
+	import { createTable, Render, Subscribe } from 'svelte-headless-table';
 
-	export let sources: Source[];
-	export let showWithValues = false;
+	interface Props {
+		sources: Source[];
+		showWithValues: boolean;
+	}
+	const { sources, showWithValues = false }: Props = $props();
 
 	const isCEX = sources.length > 0 && sources[0].type === 'CEX API';
 	const isDEX = sources.length > 0 && sources[0].type === 'DEX LP';
@@ -82,10 +85,9 @@
 
 	const { headerRows, pageRows, tableAttrs, tableBodyAttrs } = table.createViewModel(columns);
 
-	let innerWidth = 0;
-	let innerHeight = 0;
-
-	$: maxFieldLength = innerWidth < 400 ? 8 : 100;
+	let innerWidth = $state(0);
+	let innerHeight = $state(0);
+	let maxFieldLength = $derived(innerWidth < 400 ? 8 : 100);
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight />

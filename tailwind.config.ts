@@ -1,7 +1,8 @@
+import { Config } from 'tailwindcss';
+import waterReflectionPlugin from './waterReflectionPlugin';
 import { fontFamily, screens } from 'tailwindcss/defaultTheme';
 
-/** @type {import('tailwindcss').Config} */
-const config = {
+const config: Config = {
 	darkMode: 'selector',
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	safelist: ['dark'],
@@ -17,8 +18,8 @@ const config = {
 			xxxs: '380px',
 			xxs: '420px',
 			xs: '500px',
-			'2xl': '1400px',
-			...screens
+			...screens,
+			'2xl': '1400px'
 		},
 		extend: {
 			colors: {
@@ -78,7 +79,8 @@ const config = {
 				}
 			}
 		}
-	}
+	},
+	plugins: [waterReflectionPlugin]
 };
 
 export default config;

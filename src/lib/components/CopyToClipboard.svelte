@@ -2,17 +2,19 @@
 	import CopyIcon from '$lib/icons/CopyIcon.svelte';
 	import CopyingIcon from '$lib/icons/CopyingIcon.svelte';
 
-	export let value: string | number;
-	export let tooltipDirection: 'tooltip-right' | 'tooltip-left' | 'tooltip-bottom' | 'tooltip-top' =
-		'tooltip-top';
+	interface Props {
+		value: string | number;
+		tooltipDirection?: 'tooltip-right' | 'tooltip-left' | 'tooltip-bottom' | 'tooltip-top';
+		class?: string;
+	}
+	let { value, tooltipDirection = 'tooltip-top', class: className = '' }: Props = $props();
 
-	export { className as class };
-	let className = '';
+	let isCopying = $state(false);
+	let showCopiedTooltip = $state(false);
 
-	let isCopying = false;
-	let showCopiedTooltip = false;
-
-	function handleCopyToClipboard() {
+	function handleCopyToClipboard(event: MouseEvent) {
+		event.preventDefault();
+		event.stopPropagation();
 		navigator.clipboard.writeText(value.toString());
 		isCopying = true;
 		showCopiedTooltip = true;
@@ -27,11 +29,11 @@
 </script>
 
 <button
-	class={`group relative isolate z-10 -mt-2 flex h-9 w-9 shrink-0 items-center justify-center ${tooltipDirection} ${className}`}
+	class={`group relative isolate z-10 flex h-9 w-9 shrink-0 items-center justify-center ${tooltipDirection} ${className}`}
 	class:tooltip={showCopiedTooltip}
 	class:tooltip-open={showCopiedTooltip}
 	data-tip="Copied!"
-	on:click|preventDefault|stopPropagation={handleCopyToClipboard}
+	onclick={handleCopyToClipboard}
 >
 	{#if isCopying}
 		<CopyingIcon />

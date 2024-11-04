@@ -138,3 +138,10 @@ export function formatSumValue(num: number): string {
 		maximumFractionDigits: 2
 	});
 }
+
+export function camelToTitleCase(str: string): string {
+	return str
+		.replace(/([A-Z])/g, ' $1')
+		.replace(/^./, (char) => char.toUpperCase())
+		.trim();
+}

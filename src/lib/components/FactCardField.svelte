@@ -1,20 +1,34 @@
 <script lang="ts">
 	import { ellipsis } from '$lib/utils';
-	import CopyToClipboard from './CopyToClipboard.svelte';
 	import * as Tooltip from '$lib/components/ui/tooltip';
+	import CopyToClipboard from '$lib/components/CopyToClipboard.svelte';
 
-	export let name: string;
-	export let value: string | number;
-	export let accessory = '';
-	export let maxFieldLength = 20;
-	export let allowCopyToClipboard = false;
-	export let ellipsisAndHover = false;
-	export let midllipsisAndHover = false;
-	export let accessoryLink: { text: string; link: string } | null = null;
-	export let showWithHTML = false;
+	interface Props {
+		name: string;
+		value: string | number;
+		accessory?: string;
+		maxFieldLength?: number;
+		allowCopyToClipboard?: boolean;
+		ellipsisAndHover?: boolean;
+		midllipsisAndHover?: boolean;
+		accessoryLink?: { text: string; link: string } | null;
+		showWithHTML?: boolean;
+	}
+	const {
+		name,
+		value,
+		accessory = '',
+		maxFieldLength = 20,
+		allowCopyToClipboard = false,
+		ellipsisAndHover = false,
+		midllipsisAndHover = false,
+		accessoryLink = null,
+		showWithHTML = false
+	}: Props = $props();
 
-	$: showWithTooltip =
-		(ellipsisAndHover || midllipsisAndHover) && value.toString().length >= maxFieldLength;
+	let showWithTooltip = $derived(
+		(ellipsisAndHover || midllipsisAndHover) && value.toString().length >= maxFieldLength
+	);
 </script>
 
 <div class="flex">

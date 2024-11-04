@@ -2,13 +2,11 @@
 	import { formatCurrencyValue } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 
-	type $$Props = HTMLAttributes<HTMLSpanElement> & {
+	interface Props extends HTMLAttributes<HTMLSpanElement> {
 		value: number;
-	};
-
-	export let value: $$Props['value'];
-	let className: $$Props['class'] = undefined;
-	export { className as class };
+		class?: string;
+	}
+	const { value, class: className = undefined }: Props = $props();
 </script>
 
 <span class={`whitespace-nowrap ${className}`}>

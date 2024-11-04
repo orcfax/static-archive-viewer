@@ -1,10 +1,13 @@
 <script lang="ts">
-	import { formatCurrencyValue, formatSumValue } from '$lib/utils';
-	import type { Archive, Source } from '$lib/types';
 	import { Divide, Equal } from 'lucide-svelte';
+	import type { Archive, Source } from '$lib/archive.svelte';
+	import { formatCurrencyValue, formatSumValue } from '$lib/utils';
 	import FactCardField from '$lib/components/FactCardField.svelte';
 
-	export let archive: Archive;
+	interface Props {
+		archive: Archive;
+	}
+	const { archive }: Props = $props();
 
 	function getMedianAssetPairValue(sources: Source[]): number | null {
 		if (sources.length === 0) {
@@ -34,7 +37,7 @@
 <section class="flex w-fit max-w-72 flex-col">
 	<h3 class="hidden pb-4 text-xl font-bold md:inline">Calculation</h3>
 
-	<div class="section-container bg-card p-6 text-card-foreground">
+	<div class="rounded-lg border bg-card p-6 text-card-foreground">
 		{#if archive.details}
 			{@const baseAssetValueSum = archive.details.sources.reduce(
 				(acc, source) => acc + (source.baseAssetValue || 0),
@@ -59,9 +62,7 @@
 								value={getMedianAssetPairValue(archive.details.sources) ?? 0}
 							/>
 						{:else}
-							<div
-								class="flex flex-col items-center space-y-3 rounded-lg border bg-secondary/90 p-3"
-							>
+							<div class="flex flex-col items-center space-y-3 rounded-lg border bg-muted/50 p-3">
 								<FactCardField
 									name="Middle Values"
 									value={`( ${archive.details.sources[midIndex - 1].assetPairValue} + ${archive.details.sources[midIndex].assetPairValue} )`}
@@ -76,7 +77,7 @@
 							</div>
 						{/if}
 					{:else if isDEX}
-						<div class="flex flex-col items-center space-y-3 rounded-lg border bg-secondary/90 p-3">
+						<div class="flex flex-col items-center space-y-3 rounded-lg border bg-muted/50 p-3">
 							<FactCardField name="Quote Sum" value={formatSumValue(quoteAssetValueSum)} />
 							<Divide class="stroke-primary" />
 							<FactCardField name="Base Sum" value={formatSumValue(baseAssetValueSum)} />

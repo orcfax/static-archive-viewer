@@ -1,13 +1,10 @@
 <script lang="ts">
-	import TreeView from './TreeView/index.svelte';
+	import { getArchiveState } from '$lib/archive.svelte';
 	import * as Resizable from '$lib/components/ui/resizable';
 	import FileViewer from '$lib/components/FileViewer.svelte';
-	import type { Archive } from '$lib/types';
+	import TreeView from '$lib/components/TreeView/index.svelte';
 
-	interface Props {
-		archive: Archive;
-	}
-	let { archive }: Props = $props();
+	const archive = getArchiveState();
 </script>
 
 <div class="w-full">
@@ -19,7 +16,7 @@
 		>
 			<Resizable.Pane defaultSize={30}>
 				<div class="overflow-auto">
-					<TreeView directoryTree={archive.directoryTree} fact={archive.fact} />
+					<TreeView />
 				</div>
 			</Resizable.Pane>
 			<Resizable.Handle withHandle />

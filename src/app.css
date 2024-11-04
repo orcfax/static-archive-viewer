@@ -59,8 +59,4 @@
 	body {
 		@apply bg-background text-foreground;
 	}
-
-	.section-container {
-		@apply bg-section rounded-lg border p-7;
-	}
 }

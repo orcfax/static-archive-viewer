@@ -1,47 +1,33 @@
 <script lang="ts">
-	import type { FactStatement, Feed } from '$lib/types';
 	import FactCardField from '$lib/components/FactCardField.svelte';
-	import BlockchainBadges from '$lib/components/BlockchainBadges.svelte';
-	import FormattedCurrencyValue from '$lib/components/FormattedCurrencyValue.svelte';
+	import { FactStatementData, type FactStatement } from '$lib/fact.svelte';
 
-	export let fact: FactStatement;
-	export let feed: Feed;
-
-	let innerWidth = 0;
-	let innerHeight = 0;
+	interface Props {
+		fact: FactStatement;
+	}
+	let { fact }: Props = $props();
 </script>
 
-<svelte:window bind:innerWidth bind:innerHeight />
-
-<section class="flex flex-col">
+<section class="flex flex-col bg-card">
 	<div
-		class="section-container min-w-max border-2 border-primary/20 bg-card p-6 text-card-foreground"
+		class="min-w-max rounded-lg border-2 border-primary/20 bg-muted p-6 text-card-foreground dark:bg-muted/50"
 	>
 		<header class="flex flex-col">
 			<h4 class="self-center text-lg font-semibold">The price of</h4>
-			<h4 class="self-center font-extrabold text-primary">
+			<h4 class="self-center font-extrabold text-[#58938d] dark:text-primary">
 				{@html fact.description}
 			</h4>
-			<h4 class="self-center font-semibold text-primary">
-				({@html fact.inverse_description})
+			<h4 class="self-center font-semibold text-[#58938d] dark:text-primary">
+				{@html fact.inverse_description}
 			</h4>
-			<h5 class="text-center text-base font-medium">on {fact.validation_date_formatted}</h5>
-			<h5 class="text-center text-base font-medium">at {fact.validation_time_formatted}</h5>
+			<h5 class="text-center text-base font-medium">on {fact.formatted_validation_date}</h5>
+			<h5 class="text-center text-base font-medium">at {fact.formatted_validation_time}</h5>
 			<div class="divider my-2"></div>
 		</header>
 
 		<div class="grid grid-cols-1 gap-3 p-2 pb-2 pt-0 sm:grid-cols-2 lg:grid-cols-1">
-			<FactCardField name="Feed" value={feed.name} accessory={feed.type_description} />
-
-			<div class="flex">
-				<div class="flex flex-col">
-					<p class="font-bold">Value:</p>
-					<div class="flex gap-2">
-						<FormattedCurrencyValue value={fact.value} />
-					</div>
-				</div>
-			</div>
-
+			<FactCardField name="Feed" value={fact.feed_name} accessory={fact.feed_type} />
+			<FactCardField name="Value" value={fact.value} />
 			<FactCardField
 				name="Fact Statement ID"
 				value={fact.fact_urn}
@@ -51,10 +37,9 @@
 			/>
 			<FactCardField
 				name="Validation Date"
-				value={`${fact.validation_date_formatted} ${fact.validation_time_formatted}`}
-				accessory=""
+				value={`${fact.formatted_validation_date} ${fact.formatted_validation_time}`}
+				accessory={FactStatementData.getTimeSinceValidation(fact.validation_date)}
 			/>
 		</div>
-		<BlockchainBadges {fact} class="-mb-4 -ml-6 mt-2" />
 	</div>
 </section>

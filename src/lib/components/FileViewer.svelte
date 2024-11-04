@@ -1,13 +1,16 @@
 <script lang="ts">
 	import { mode as theme } from 'mode-watcher';
 	import json from 'svelte-highlight/languages/json';
+	import * as Tooltip from '$lib/components/ui/tooltip';
+	import type { ArchivedFile } from '$lib/archive.svelte';
 	import Highlight, { LineNumbers } from 'svelte-highlight';
 	import { atomOneLight, atomOneDark } from 'svelte-highlight/styles';
-	import type { ArchivedFile } from '$lib/types';
-	import * as Tooltip from '$lib/components/ui/tooltip';
-	import CopyToClipboard from './CopyToClipboard.svelte';
+	import CopyToClipboard from '$lib/components/CopyToClipboard.svelte';
 
-	export let file: ArchivedFile | undefined;
+	interface Props {
+		file?: ArchivedFile;
+	}
+	const { file }: Props = $props();
 </script>
 
 <svelte:head>

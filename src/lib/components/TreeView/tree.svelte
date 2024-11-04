@@ -18,12 +18,12 @@
 </script>
 
 <script lang="ts">
-	import { melt, type TreeView } from '@melt-ui/svelte';
 	import { afterUpdate, getContext } from 'svelte';
 	import { getArchiveState } from '$lib/archive.svelte';
+	import { melt, type TreeView } from '@melt-ui/svelte';
 
 	const archive = getArchiveState();
-
+	console.log('test tree: ', archive);
 	export let treeItems: TreeItem[];
 	export let level = 1;
 

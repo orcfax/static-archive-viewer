@@ -1,15 +1,18 @@
 <script lang="ts">
-	import type { Archive } from '$lib/types';
-	import CollectionDetails from './CollectionDetails.svelte';
-	import ValidationDetails from './ValidationDetails.svelte';
-	import CalculationDetails from './CalculationDetails.svelte';
+	import type { Archive } from '$lib/archive.svelte';
 	import * as Accordion from '$lib/components/ui/accordion/index.js';
+	import CollectionDetails from '$lib/components/CollectionDetails.svelte';
+	import ValidationDetails from '$lib/components/ValidationDetails.svelte';
+	import CalculationDetails from '$lib/components/CalculationDetails.svelte';
 
-	export let archive: Archive;
+	interface Props {
+		archive: Archive;
+	}
+	const { archive }: Props = $props();
 </script>
 
 <div class="flex w-full flex-col">
-	<h3 class="text-2xl font-bold">Fact <span class="xxs:inline hidden">Statement</span> Details</h3>
+	<h3 class="text-2xl font-bold">Fact <span class="hidden xxs:inline">Statement</span> Details</h3>
 	<Accordion.Root class="w-full" multiple={true}>
 		<Accordion.Item value="collection">
 			<Accordion.Trigger class="text-xl font-bold">Collection</Accordion.Trigger>
