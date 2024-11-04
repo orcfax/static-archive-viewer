@@ -1,0 +1,609 @@
+{
+	"fact": {
+		"fact_urn": "urn:orcfax:1cd10ecd-119a-417b-9a76-a62f6aba65a2",
+		"feed_name": "HOSKY-ADA",
+		"feed_type": "currentExchangeRate",
+		"value": 2.71e-8,
+		"inverse_value": 0,
+		"description": "The price of 1 HOSKY at 2024-11-02T15:03:04Z is 2.71e-08 ADA",
+		"inverse_description": "",
+		"validation_date": "2024-11-02T15:03:04Z"
+	},
+	"files": [
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/bag-info.txt",
+			"fileName": "bag-info.txt",
+			"extension": "TXT",
+			"content": "Bag-Software-Agent: bagit.py v1.8.1 <https://github.com/LibraryOfCongress/bagit-python>\nBagging-Date: 2024-11-02\nEpoch-Day: 1730505600\nEpoch-Hour: 1730559600\nEpoch-Month: 1730419200\nEpoch-Week: 1730073600\nEpoch-Year: 1704067200\nFact-Datum-Identifier: 1cd10ecd-119a-417b-9a76-a62f6aba65a2\nFact-Datum-URN: urn:orcfax:1cd10ecd-119a-417b-9a76-a62f6aba65a2\nFact-Datum-Value: 2.71e-08\nFact-Description: The price of 1 HOSKY at 2024-11-02T15:03:04Z is 2.71e-08 ADA\nFact-Validation-Date: 2024-11-02T15:03:04Z\nFeed-ID: CER/HOSKY-ADA/3\nFeed-Name: HOSKY-ADA\nFeed-Type: currentExchangeRate\nPackage-Version: 3\nPackaging-Agent: api.arkly.io/2024.6.12.2\nPayload-Oxum: 16065.11\nSource-Organization: Orcfax\nSystem-Identifier: urn:orcfax:system:f0122760-64f8-445d-bd28-9c93a6391f89\nSystem-Name: Orcfax Node\nSystem-Version: Orcfax Node (1.1.0)\nUnix-Time: 1730559784\n"
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/bagit.txt",
+			"fileName": "bagit.txt",
+			"extension": "TXT",
+			"content": "BagIt-Version: 0.97\nTag-File-Character-Encoding: UTF-8\n"
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/data/fact-statement-HOSKY-ADA-2024-11-02T15-03-04Z.json",
+			"fileName": "fact-statement-HOSKY-ADA-2024-11-02T15-03-04Z.json",
+			"extension": "JSON",
+			"content": {
+				"@context": "https://schema.org",
+				"type": "Claim",
+				"description": "HOSKY price in ADA",
+				"identifier": "urn:orcfax:33f6fd41-0550-46ad-8fe4-633c43ff106e",
+				"dateCreated": "2024-11-02T15:03:04Z",
+				"text": "The price of 1 HOSKY at 2024-11-02T15:03:04Z is 2.71e-08 ADA",
+				"about": {
+					"@type": "ExchangeRateSpecification",
+					"currency": "HOSKY",
+					"currentExchangeRate": {
+						"@type": "UnitPriceSpecification",
+						"price": 2.71e-8,
+						"priceCurrency": "ADA"
+					}
+				},
+				"claimInterpreter": {
+					"@type": "Organization",
+					"name": "Orcfax",
+					"url": "https://orcfax.io/"
+				},
+				"appearance": [
+					"message-HOSKY-ADA-MinSwap-2024-11-02T15-02-08Z.json",
+					"message-HOSKY-ADA-MinSwapV2-2024-11-02T15-02-08Z.json",
+					"message-HOSKY-ADA-SundaeSwapV3-2024-11-02T15-02-08Z.json",
+					"message-HOSKY-ADA-WingRiders-2024-11-02T15-02-08Z.json",
+					"message-HOSKY-ADA-WingRidersV2-2024-11-02T15-02-08Z.json",
+					"message-HOSKY-ADA-SundaeSwap-2024-11-02T15-02-08Z.json",
+					"message-HOSKY-ADA-Spectrum-2024-11-02T15-02-08Z.json"
+				],
+				"isBasedOn": {
+					"@type": "CreativeWork",
+					"name": "validation-HOSKY-ADA-2024-11-02T15-03-04Z.json",
+					"creator": "Orcfax Validator Node: 1.1.0",
+					"identifier": "urn:orcfax:e0da6d3a-2791-463b-9df8-004e75c011bb",
+					"license": "https://creativecommons.org/licenses/by/4.0/"
+				}
+			}
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/data/fact-statement-datum-HOSKY-ADA-2024-11-02T15-03-04Z.json",
+			"fileName": "fact-statement-datum-HOSKY-ADA-2024-11-02T15-03-04Z.json",
+			"extension": "JSON",
+			"content": {
+				"@context": "https://schema.org",
+				"type": "Message",
+				"name": "CER/HOSKY-ADA/3",
+				"identifier": "urn:orcfax:1cd10ecd-119a-417b-9a76-a62f6aba65a2",
+				"publisher": { "@type": "Organization", "name": "Orcfax", "url": "https://orcfax.io/" },
+				"dateCreated": "2024-11-02T15:03:04Z",
+				"messageAttachment": {
+					"encoding": "application/json:base64",
+					"text": "ewogICJmZWVkX2lkIjogIkNFUi9IT1NLWS1BREEvMyIsCiAgImNyZWF0ZWRfYXQiOiAxNzMwNTU5Nzg0ODkyLAogICJib2R5IjogewogICAgIm51bWVyYXRvciI6IDI3MSwKICAgICJkZW5vbWluYXRvciI6IDEwMDAwMDAwMDAwCiAgfQp9"
+				}
+			}
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/data/message-HOSKY-ADA-MinSwap-2024-11-02T15-02-08Z.json",
+			"fileName": "message-HOSKY-ADA-MinSwap-2024-11-02T15-02-08Z.json",
+			"extension": "JSON",
+			"content": {
+				"@context": "https://schema.org",
+				"type": "Message",
+				"name": "HOSKY-ADA",
+				"isBasedOn": {
+					"@type": "MediaObject",
+					"name": "Exchange data",
+					"additionalType": "Decentralized Exchange Data",
+					"description": "the on-chain liquidity pool data from a decentralized exchange (DEX) as read by an Orcfax collector-node"
+				},
+				"sender": "urn:cardano:address:minswap:addr1z8snz7c4974vzdpxu65ruphl3zjdvtxw8strf2c2tmqnxz2j2c79gy9l76sdg0xwhd7r0c0kna0tycz4y5s6mlenh8pq0xmsha",
+				"recipient": "MinSwap-cnt-collector-node/1.1.2",
+				"identifier": "urn:orcfax:6c3917cc-02d3-435b-a380-09db89bfd8e6",
+				"dateReceived": "2024-11-02T15:02:08Z",
+				"messageAttachment": {
+					"encoding": "application/json;base64",
+					"text": {
+						"token1_name": "484f534b59",
+						"token1_decimals": 0,
+						"token2_name": "lovelace",
+						"token2_decimals": 6,
+						"block_height": 138993418,
+						"source": "MinSwap",
+						"collector": "cnt-collector-node/1.1.2",
+						"address": "addr1z8snz7c4974vzdpxu65ruphl3zjdvtxw8strf2c2tmqnxz2j2c79gy9l76sdg0xwhd7r0c0kna0tycz4y5s6mlenh8pq0xmsha",
+						"feed": "HOSKY-ADA",
+						"utxo": "d832a1c38be2f4e135cd88841f7a0a050948955289e3ac49f6ff84514af47078#0",
+						"token1_volume": 2299424832844,
+						"token2_volume": 62820.924565,
+						"price": 2.7320277517965714e-8,
+						"amounts": {
+							"a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235.484f534b59": 2299424832844,
+							"lovelace": 62820924565
+						}
+					}
+				}
+			}
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/data/message-HOSKY-ADA-MinSwapV2-2024-11-02T15-02-08Z.json",
+			"fileName": "message-HOSKY-ADA-MinSwapV2-2024-11-02T15-02-08Z.json",
+			"extension": "JSON",
+			"content": {
+				"@context": "https://schema.org",
+				"type": "Message",
+				"name": "HOSKY-ADA",
+				"isBasedOn": {
+					"@type": "MediaObject",
+					"name": "Exchange data",
+					"additionalType": "Decentralized Exchange Data",
+					"description": "the on-chain liquidity pool data from a decentralized exchange (DEX) as read by an Orcfax collector-node"
+				},
+				"sender": "urn:cardano:address:minswapv2:addr1z84q0denmyep98ph3tmzwsmw0j7zau9ljmsqx6a4rvaau66j2c79gy9l76sdg0xwhd7r0c0kna0tycz4y5s6mlenh8pq777e2a",
+				"recipient": "MinSwapV2-cnt-collector-node/1.1.2",
+				"identifier": "urn:orcfax:851ecc2b-de1f-4d91-b8b0-f5212e2fcaba",
+				"dateReceived": "2024-11-02T15:02:08Z",
+				"messageAttachment": {
+					"encoding": "application/json;base64",
+					"text": {
+						"token1_name": "484f534b59",
+						"token1_decimals": 0,
+						"token2_name": "lovelace",
+						"token2_decimals": 6,
+						"block_height": 138993418,
+						"source": "MinSwapV2",
+						"collector": "cnt-collector-node/1.1.2",
+						"address": "addr1z84q0denmyep98ph3tmzwsmw0j7zau9ljmsqx6a4rvaau66j2c79gy9l76sdg0xwhd7r0c0kna0tycz4y5s6mlenh8pq777e2a",
+						"feed": "HOSKY-ADA",
+						"utxo": "365a36f7b3ee720ce92efb7b6fbd66b2851c4f64eeda7eedf64b6cf1d8903175#1",
+						"token1_volume": 14023455578211,
+						"token2_volume": 378416.698215,
+						"price": 2.698455427797457e-8,
+						"amounts": {
+							"a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235.484f534b59": 14023455578211,
+							"lovelace": 378416698215
+						}
+					}
+				}
+			}
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/data/message-HOSKY-ADA-Spectrum-2024-11-02T15-02-08Z.json",
+			"fileName": "message-HOSKY-ADA-Spectrum-2024-11-02T15-02-08Z.json",
+			"extension": "JSON",
+			"content": {
+				"@context": "https://schema.org",
+				"type": "Message",
+				"name": "HOSKY-ADA",
+				"isBasedOn": {
+					"@type": "MediaObject",
+					"name": "Exchange data",
+					"additionalType": "Decentralized Exchange Data",
+					"description": "the on-chain liquidity pool data from a decentralized exchange (DEX) as read by an Orcfax collector-node"
+				},
+				"sender": "urn:cardano:address:spectrum:addr1x8nz307k3sr60gu0e47cmajssy4fmld7u493a4xztjrll0aj764lvrxdayh2ux30fl0ktuh27csgmpevdu89jlxppvrswgxsta",
+				"recipient": "Spectrum-cnt-collector-node/1.1.2",
+				"identifier": "urn:orcfax:ad60079e-452b-414a-adaf-7171f0eee246",
+				"dateReceived": "2024-11-02T15:02:08Z",
+				"messageAttachment": {
+					"encoding": "application/json;base64",
+					"text": {
+						"token1_name": "484f534b59",
+						"token1_decimals": 0,
+						"token2_name": "lovelace",
+						"token2_decimals": 6,
+						"block_height": 138993418,
+						"source": "Spectrum",
+						"collector": "cnt-collector-node/1.1.2",
+						"address": "addr1x8nz307k3sr60gu0e47cmajssy4fmld7u493a4xztjrll0aj764lvrxdayh2ux30fl0ktuh27csgmpevdu89jlxppvrswgxsta",
+						"feed": "HOSKY-ADA",
+						"utxo": "2f3ef048e87b63fc04246e8bbe78256c297feb696e706889dab6ea311114963f#0",
+						"token1_volume": 3341607890,
+						"token2_volume": 119.109449,
+						"price": 3.564435233602468e-8,
+						"amounts": {
+							"a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235.484f534b59": 3341607890,
+							"lovelace": 119109449
+						}
+					}
+				}
+			}
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/data/message-HOSKY-ADA-SundaeSwap-2024-11-02T15-02-08Z.json",
+			"fileName": "message-HOSKY-ADA-SundaeSwap-2024-11-02T15-02-08Z.json",
+			"extension": "JSON",
+			"content": {
+				"@context": "https://schema.org",
+				"type": "Message",
+				"name": "HOSKY-ADA",
+				"isBasedOn": {
+					"@type": "MediaObject",
+					"name": "Exchange data",
+					"additionalType": "Decentralized Exchange Data",
+					"description": "the on-chain liquidity pool data from a decentralized exchange (DEX) as read by an Orcfax collector-node"
+				},
+				"sender": "urn:cardano:address:sundaeswap:addr1w9qzpelu9hn45pefc0xr4ac4kdxeswq7pndul2vuj59u8tqaxdznu",
+				"recipient": "SundaeSwap-cnt-collector-node/1.1.2",
+				"identifier": "urn:orcfax:f93b0b72-f16a-4d7b-a91c-421fd198b365",
+				"dateReceived": "2024-11-02T15:02:08Z",
+				"messageAttachment": {
+					"encoding": "application/json;base64",
+					"text": {
+						"token1_name": "484f534b59",
+						"token1_decimals": 0,
+						"token2_name": "lovelace",
+						"token2_decimals": 6,
+						"block_height": 138993418,
+						"source": "SundaeSwap",
+						"collector": "cnt-collector-node/1.1.2",
+						"address": "addr1w9qzpelu9hn45pefc0xr4ac4kdxeswq7pndul2vuj59u8tqaxdznu",
+						"feed": "HOSKY-ADA",
+						"utxo": "f174072abd07a25815e9ec00d86073ab60fe4a6844d30fe760af343cf8402056#0",
+						"token1_volume": 300787156305,
+						"token2_volume": 8230.882138,
+						"price": 2.736447340076528e-8,
+						"amounts": {
+							"a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235.484f534b59": 300787156305,
+							"lovelace": 8230882138
+						}
+					}
+				}
+			}
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/data/message-HOSKY-ADA-SundaeSwapV3-2024-11-02T15-02-08Z.json",
+			"fileName": "message-HOSKY-ADA-SundaeSwapV3-2024-11-02T15-02-08Z.json",
+			"extension": "JSON",
+			"content": {
+				"@context": "https://schema.org",
+				"type": "Message",
+				"name": "HOSKY-ADA",
+				"isBasedOn": {
+					"@type": "MediaObject",
+					"name": "Exchange data",
+					"additionalType": "Decentralized Exchange Data",
+					"description": "the on-chain liquidity pool data from a decentralized exchange (DEX) as read by an Orcfax collector-node"
+				},
+				"sender": "urn:cardano:address:sundaeswapv3:addr1x8srqftqemf0mjlukfszd97ljuxdp44r372txfcr75wrz26rnxqnmtv3hdu2t6chcfhl2zzjh36a87nmd6dwsu3jenqsslnz7e",
+				"recipient": "SundaeSwapV3-cnt-collector-node/1.1.2",
+				"identifier": "urn:orcfax:089cddc2-8512-4b9a-b27b-df57751fd18c",
+				"dateReceived": "2024-11-02T15:02:08Z",
+				"messageAttachment": {
+					"encoding": "application/json;base64",
+					"text": {
+						"token1_name": "484f534b59",
+						"token1_decimals": 0,
+						"token2_name": "lovelace",
+						"token2_decimals": 6,
+						"block_height": 138993418,
+						"source": "SundaeSwapV3",
+						"collector": "cnt-collector-node/1.1.2",
+						"address": "addr1x8srqftqemf0mjlukfszd97ljuxdp44r372txfcr75wrz26rnxqnmtv3hdu2t6chcfhl2zzjh36a87nmd6dwsu3jenqsslnz7e",
+						"feed": "HOSKY-ADA",
+						"utxo": "fc26aa9324549d27b0da8a731f298efefb98dabf54887c26df905ccaae4e5acf#0",
+						"token1_volume": 1876515320,
+						"token2_volume": 79.553478,
+						"price": 4.239425980279234e-8,
+						"amounts": {
+							"a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235.484f534b59": 1876515320,
+							"lovelace": 79553478
+						}
+					}
+				}
+			}
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/data/message-HOSKY-ADA-WingRiders-2024-11-02T15-02-08Z.json",
+			"fileName": "message-HOSKY-ADA-WingRiders-2024-11-02T15-02-08Z.json",
+			"extension": "JSON",
+			"content": {
+				"@context": "https://schema.org",
+				"type": "Message",
+				"name": "HOSKY-ADA",
+				"isBasedOn": {
+					"@type": "MediaObject",
+					"name": "Exchange data",
+					"additionalType": "Decentralized Exchange Data",
+					"description": "the on-chain liquidity pool data from a decentralized exchange (DEX) as read by an Orcfax collector-node"
+				},
+				"sender": "urn:cardano:address:wingriders:addr1z8nvjzjeydcn4atcd93aac8allvrpjn7pjr2qsweukpnayvgedqwg3tvxxvhlgnrzujmpw9qful70s6tfga5gyadds4qsksxeq",
+				"recipient": "WingRiders-cnt-collector-node/1.1.2",
+				"identifier": "urn:orcfax:bd5405bc-4c34-443b-8c4f-28da6d61f2d9",
+				"dateReceived": "2024-11-02T15:02:08Z",
+				"messageAttachment": {
+					"encoding": "application/json;base64",
+					"text": {
+						"token1_name": "484f534b59",
+						"token1_decimals": 0,
+						"token2_name": "lovelace",
+						"token2_decimals": 6,
+						"block_height": 138993418,
+						"source": "WingRiders",
+						"collector": "cnt-collector-node/1.1.2",
+						"address": "addr1z8nvjzjeydcn4atcd93aac8allvrpjn7pjr2qsweukpnayvgedqwg3tvxxvhlgnrzujmpw9qful70s6tfga5gyadds4qsksxeq",
+						"feed": "HOSKY-ADA",
+						"utxo": "e24e3862a4241d4837483b31daf114470ccae973442f38ecba32770144932c6b#0",
+						"token1_volume": 351394424901,
+						"token2_volume": 9574.44997,
+						"price": 2.7247017287475334e-8,
+						"amounts": {
+							"a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235.484f534b59": 351394424901,
+							"lovelace": 9574449970
+						}
+					}
+				}
+			}
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/data/message-HOSKY-ADA-WingRidersV2-2024-11-02T15-02-08Z.json",
+			"fileName": "message-HOSKY-ADA-WingRidersV2-2024-11-02T15-02-08Z.json",
+			"extension": "JSON",
+			"content": {
+				"@context": "https://schema.org",
+				"type": "Message",
+				"name": "HOSKY-ADA",
+				"isBasedOn": {
+					"@type": "MediaObject",
+					"name": "Exchange data",
+					"additionalType": "Decentralized Exchange Data",
+					"description": "the on-chain liquidity pool data from a decentralized exchange (DEX) as read by an Orcfax collector-node"
+				},
+				"sender": "urn:cardano:address:wingridersv2:addr1zxhew7fmsup08qvhdnkg8ccra88pw7q5trrncja3dlszhqahnnkdeex48glxptpj65zc5jyp7rhynd0fplm3sznpl7xsu9g7vd",
+				"recipient": "WingRidersV2-cnt-collector-node/1.1.2",
+				"identifier": "urn:orcfax:41992248-d9ee-4aea-b933-cbf209ea32ec",
+				"dateReceived": "2024-11-02T15:02:08Z",
+				"messageAttachment": {
+					"encoding": "application/json;base64",
+					"text": {
+						"token1_name": "484f534b59",
+						"token1_decimals": 0,
+						"token2_name": "lovelace",
+						"token2_decimals": 6,
+						"block_height": 138993418,
+						"source": "WingRidersV2",
+						"collector": "cnt-collector-node/1.1.2",
+						"address": "addr1zxhew7fmsup08qvhdnkg8ccra88pw7q5trrncja3dlszhqahnnkdeex48glxptpj65zc5jyp7rhynd0fplm3sznpl7xsu9g7vd",
+						"feed": "HOSKY-ADA",
+						"utxo": "4c894caacde03e6ee98844cad21755c69e19900198c96bda46ab138f9029cbf0#0",
+						"token1_volume": 209574873439,
+						"token2_volume": 5851.34705,
+						"price": 2.7920079129634425e-8,
+						"amounts": {
+							"a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235.484f534b59": 209574873439,
+							"lovelace": 5851347050
+						}
+					}
+				}
+			}
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/data/validation-HOSKY-ADA-2024-11-02T15-03-04Z.json",
+			"fileName": "validation-HOSKY-ADA-2024-11-02T15-03-04Z.json",
+			"extension": "JSON",
+			"content": {
+				"@context": "https://schema.org",
+				"type": "MediaObject",
+				"identifier": "urn:orcfax:e0da6d3a-2791-463b-9df8-004e75c011bb",
+				"isBasedOn": {
+					"@type": "MediaObject",
+					"name": "the raw information sent to an Orcfax validator by an Orcfax node",
+					"identifier": "urn:orcfax:node:2a531a7e-4961-4895-985d-1fa9aaaf50a2"
+				},
+				"contributor": {
+					"@type": "Organization",
+					"name": "AS14061 DigitalOcean, LLC",
+					"locationCreated": {
+						"address": {
+							"@type": "PostalAddress",
+							"addressLocality": "London",
+							"addressRegion": "England, GB,",
+							"geo": "51.5085,-0.1257"
+						}
+					}
+				},
+				"additionalType": [
+					{
+						"@type": "Event",
+						"description": "successful content signature generation for Orcfax node data",
+						"startDate": "2024-11-02T15:03:04Z",
+						"recordedIn": {
+							"@type": "CreativeWork",
+							"description": {
+								"@type": "TextObject",
+								"comment": "an Orcfax content signature is a sha256 digest of a node's 'collected timestamp', 'data-points' in-order and the 'node identifier' (uuid)",
+								"sha256": "b5f5fc9ab3f8939824c25cfb5e4db06bae532245dd2b844841bd8b7a7fd88e75"
+							},
+							"hasPart": [
+								{
+									"@type": "CreativeWork",
+									"description": "collecting timestamp",
+									"text": "2024-11-02T15:02:08Z"
+								},
+								{
+									"@type": "CreativeWork",
+									"description": "data points for HOSKY-ADA",
+									"text": [
+										"[2299424832844.0, 14023455578211.0, 1876515320.0, 351394424901.0, 209574873439.0, 300787156305.0, 3341607890.0]",
+										"[62820.924565, 378416.698215, 79.553478, 9574.44997, 5851.34705, 8230.882138, 119.109449]"
+									]
+								},
+								{
+									"@type": "CreativeWork",
+									"description": "node identifier (uuid)",
+									"text": "2a531a7e-4961-4895-985d-1fa9aaaf50a2"
+								}
+							]
+						}
+					},
+					{
+						"@type": "Event",
+						"description": "average price is determined by dividing total volume of ADA by total volume of HOSKY",
+						"startDate": "2024-11-02T15:03:04Z",
+						"about": {
+							"@type": "Observation",
+							"measurementMethod": [
+								"volume/liquidity average sum(valueReference[1]) (ADA) divided by sum(valueReference[0]) (HOSKY)"
+							],
+							"value": 2.71e-8,
+							"valueReference": [
+								"[2299424832844.0, 14023455578211.0, 1876515320.0, 351394424901.0, 209574873439.0, 300787156305.0, 3341607890.0]",
+								"[62820.924565, 378416.698215, 79.553478, 9574.44997, 5851.34705, 8230.882138, 119.109449]"
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/data/version-orcfax-price-feed-schema-v3.json",
+			"fileName": "version-orcfax-price-feed-schema-v3.json",
+			"extension": "JSON",
+			"content": {
+				"@context": "https://schema.org",
+				"@type": "CreativeWork",
+				"description": {
+					"@type": "TextObject",
+					"text": "Orcfax schema version",
+					"additionalType": "currentExchangeRate",
+					"isBasedOn": {
+						"@type": "SoftwareApplication",
+						"applicationCategory": "oracle",
+						"applicationSubcategory": "validator",
+						"softwareName": "Orcfax Node",
+						"softwareVersion": "Orcfax Node (1.1.0)",
+						"producer": { "@type": "Organization", "name": "Orcfax", "url": "https://orcfax.io/" }
+					}
+				},
+				"version": 3
+			}
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/manifest-sha256.txt",
+			"fileName": "manifest-sha256.txt",
+			"extension": "TXT",
+			"content": "a42cdd78f4cc5db17850f03c4dcf5ec236f670e3aae58095d720cf93a1b89a49  data/fact-statement-HOSKY-ADA-2024-11-02T15-03-04Z.json\n64add5b89dcf7cd6fca025f11eaef27bfd77df64407a39ab285fa489174f1878  data/fact-statement-datum-HOSKY-ADA-2024-11-02T15-03-04Z.json\n0f2b5fb605b8a792bf8d3b15d81748cabfa2f1d21a2445add9dae450fef44267  data/message-HOSKY-ADA-MinSwap-2024-11-02T15-02-08Z.json\nc6a13f9f88275540e0a9c46801517c8447f06bff63a7de2384feb2703b780627  data/message-HOSKY-ADA-MinSwapV2-2024-11-02T15-02-08Z.json\naad9ff3a2139dcea7f596819027394161c95551a7bdd470db78bc5dcafd52759  data/message-HOSKY-ADA-Spectrum-2024-11-02T15-02-08Z.json\n1401056fd87bcaf0f01c4f27c68dcb82198e826fedce07daabd520546595824c  data/message-HOSKY-ADA-SundaeSwap-2024-11-02T15-02-08Z.json\n74aefc1c2fb5327a4c8ae3dc29db723f243682d1d255e1574b6b64e9d4723207  data/message-HOSKY-ADA-SundaeSwapV3-2024-11-02T15-02-08Z.json\n9cafd15043a4c158a26482c1412ab8998b6be6dead291de3d4b67ac14408dcf0  data/message-HOSKY-ADA-WingRiders-2024-11-02T15-02-08Z.json\nef0ea5a9cdce2c7995383df7dd74cd8b3e658f517f9a07148dff522f974092c8  data/message-HOSKY-ADA-WingRidersV2-2024-11-02T15-02-08Z.json\n66b7c0096b1418fe1277b3f07e4ea186bc21c79dcc8e9a28c7d08740bfb9d2d2  data/validation-HOSKY-ADA-2024-11-02T15-03-04Z.json\nb929f3de716f0673adc3bc2f5982e443cd3a99c922fa8cefc93abe12fcc37aa3  data/version-orcfax-price-feed-schema-v3.json\n"
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/manifest-sha512.txt",
+			"fileName": "manifest-sha512.txt",
+			"extension": "TXT",
+			"content": "aeeee814253dc0c7cba80f77879a48fdf8da92659a06c46aad4dd21ed901d7b74374703b33291b092e57cf75a7c15f2cafa4813a072039da63820f0fdbdbb0b5  data/fact-statement-HOSKY-ADA-2024-11-02T15-03-04Z.json\n9a20b9a8b9590cc0be87980f1199adc13b182c28e1f6a8f4759e7ee84f21ea994b186d63f1744e9b6c27e6d1f67f32389bda590ea862e12acdfb21e647ffcf70  data/fact-statement-datum-HOSKY-ADA-2024-11-02T15-03-04Z.json\ndcf63b231adca00a0ec19b6f34fed2c4a0bb04217c3f73beca9ca6898084faf3e53822b1b59667fec08d1c3ba98b55bbad0afc3bb7e1751791237e510eb1afdd  data/message-HOSKY-ADA-MinSwap-2024-11-02T15-02-08Z.json\nacec8f4c097bc5c68fcbab769aec37b929ae781daf9224bceba4f90993b295fe8ed1f063e9149d6c67b64d9bd21d8d293021f4210d0fbf0fc330518284cdf6ac  data/message-HOSKY-ADA-MinSwapV2-2024-11-02T15-02-08Z.json\n020aca2ddfa2e4543cb8669840cbe9fe8d236e3de9118ae9b9f0e0aa97a534ceda5287ad0e80db37d774d74282f460a4c032b259009dc9bce4b254e0376d5ffc  data/message-HOSKY-ADA-Spectrum-2024-11-02T15-02-08Z.json\nd83e6a70ea0b041dccc5319805ec3659ac2d1fd5355a4e8d1956aaf9bc21dd07aeba0d2043c1475d6bbac5a29a126de584965e64feffafb7882bc2d960df8acd  data/message-HOSKY-ADA-SundaeSwap-2024-11-02T15-02-08Z.json\n6f4ed80a1e5a3b361a40bc8af8e8af226420ed7932f95e8ac9f71a1b9e1ea2c829aa96b44cb8c1ba8fe5cb307115381706f313eafbc0e5a3b67aa67a48ae50cb  data/message-HOSKY-ADA-SundaeSwapV3-2024-11-02T15-02-08Z.json\n518d838eb2644229147f4cd44f739158d28e7a90bebadcf028665bfc0585c83bd21f54d4156f0a58e0c5a4d9b085836825fe20bf91c6126478038a0a8f8a1af9  data/message-HOSKY-ADA-WingRiders-2024-11-02T15-02-08Z.json\nbca4bebd10977dcf54ac816fbef9d9e9edee4dbd2ff204085e870e82ac4aac84e1a324f804216343cdb7a16a96c3dc74fcc47e45ce99f55c331c483e9df171e0  data/message-HOSKY-ADA-WingRidersV2-2024-11-02T15-02-08Z.json\nc48d0c22fe5a03a10435220031871ce79d85d67600c9c51fa1215585ecc23d52991225b0dc8578e98da06b6d2531f4d41c0ed13f8ec5b43924b16f69367673b5  data/validation-HOSKY-ADA-2024-11-02T15-03-04Z.json\n05db2265727eaa7182a03b9e1ba583da3960673db0b750e1f517002deb0b5c1ee889bdd6a4e31bba8f14676d73be880cc81b7a4f7dae281b3bbcbec506446688  data/version-orcfax-price-feed-schema-v3.json\n"
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/tagmanifest-sha256.txt",
+			"fileName": "tagmanifest-sha256.txt",
+			"extension": "TXT",
+			"content": "85dfe3f91fee2e01b637ac0810c5b9f29e747eb91fb0e53a81bb99a8248995e4 bag-info.txt\n8302887cf882409f87ffc19f82c17e8b8614d41368dc6bce64edb5b32679415a manifest-sha512.txt\ne91f941be5973ff71f1dccbdd1a32d598881893a7f21be516aca743da38b1689 bagit.txt\n2a64e8c6e7e413e361f7022893e7fadb921ad00b92af12a2664f6791569d519b manifest-sha256.txt\n"
+		},
+		{
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z/tagmanifest-sha512.txt",
+			"fileName": "tagmanifest-sha512.txt",
+			"extension": "TXT",
+			"content": "bd59de66762fd7c2339a54bb6b74393f808e1787e0e7ce68cffd730659e77e1bfac0268ce94c4b7acd9a2c853911a3f6bbb1f32a0da543e1b0503ff63eacaef5 bag-info.txt\n4d35a9ed0eb07a0fcdb6e1b8e1485b5ab898b44c0e8ad43e59ab42220af35f7b6f0c6fce86f768d85db234e18282b09ce9d24be6c05371c411d005edf29615c0 manifest-sha512.txt\n418dcfbe17d5f4b454b18630be795462cf7da4ceb6313afa49451aa2568e41f7ca3d34cf0280c7d056dc5681a70c37586aa1755620520b9198eede905ba2d0f6 bagit.txt\nba546cfa45baedfa11742667d11c536f228592ff816825a1fe2c7cbf8343e97dde97a1bed8d7e141a934d1b911f8965dc51097e987048d0a2a8f5006e6b22506 manifest-sha256.txt\n"
+		}
+	],
+	"details": {
+		"sources": [
+			{
+				"name": "MinSwap",
+				"description": "",
+				"type": "DEX LP",
+				"website": "https://minswap.org",
+				"background_color": "#8AAAFF",
+				"baseAssetValue": 2299424832844,
+				"quoteAssetValue": 62820.924565
+			},
+			{
+				"name": "MinSwapV2",
+				"description": "",
+				"type": "DEX LP",
+				"website": "https://minswap.org",
+				"background_color": "#8AAAFF",
+				"baseAssetValue": 14023455578211,
+				"quoteAssetValue": 378416.698215
+			},
+			{
+				"name": "Spectrum",
+				"description": "",
+				"type": "DEX LP",
+				"website": "https://spectrum.fi",
+				"background_color": "#FFFFFF",
+				"baseAssetValue": 1876515320,
+				"quoteAssetValue": 79.553478
+			},
+			{
+				"name": "SundaeSwap",
+				"description": "",
+				"type": "DEX LP",
+				"website": "https://sundae.fi/products/sundaeswap",
+				"background_color": "#F6C9AA",
+				"baseAssetValue": 351394424901,
+				"quoteAssetValue": 9574.44997
+			},
+			{
+				"name": "SundaeSwapV3",
+				"description": "",
+				"type": "DEX LP",
+				"website": "https://sundae.fi/products/sundaeswap",
+				"background_color": "#F6C9AA",
+				"baseAssetValue": 209574873439,
+				"quoteAssetValue": 5851.34705
+			},
+			{
+				"name": "WingRiders",
+				"description": "",
+				"type": "DEX LP",
+				"website": "https://www.wingriders.com",
+				"background_color": "#00A064",
+				"baseAssetValue": 300787156305,
+				"quoteAssetValue": 8230.882138
+			},
+			{
+				"name": "WingRidersV2",
+				"description": "",
+				"type": "DEX LP",
+				"website": "https://www.wingriders.com",
+				"background_color": "#00A064",
+				"baseAssetValue": 3341607890,
+				"quoteAssetValue": 119.109449
+			}
+		],
+		"collectionTimestamp": "2024-11-02T15:02:08Z",
+		"collectorNodeID": "urn:orcfax:node:2a531a7e-4961-4895-985d-1fa9aaaf50a2",
+		"contentSignature": "b5f5fc9ab3f8939824c25cfb5e4db06bae532245dd2b844841bd8b7a7fd88e75",
+		"calculationMethod": "average price is determined by dividing total volume of ADA by total volume of HOSKY",
+		"validationDate": "2024-11-02T15:03:04Z",
+		"sourceType": "DEX"
+	},
+	"directoryTree": [
+		{
+			"type": "folder",
+			"name": "fact-HOSKY-ADA-2024-11-02T15-02-08Z",
+			"nodes": [
+				{ "type": "file", "name": "bag-info.txt" },
+				{ "type": "file", "name": "bagit.txt" },
+				{
+					"type": "folder",
+					"name": "data",
+					"nodes": [
+						{ "type": "file", "name": "fact-statement-HOSKY-ADA-2024-11-02T15-03-04Z.json" },
+						{ "type": "file", "name": "fact-statement-datum-HOSKY-ADA-2024-11-02T15-03-04Z.json" },
+						{ "type": "file", "name": "message-HOSKY-ADA-MinSwap-2024-11-02T15-02-08Z.json" },
+						{ "type": "file", "name": "message-HOSKY-ADA-MinSwapV2-2024-11-02T15-02-08Z.json" },
+						{ "type": "file", "name": "message-HOSKY-ADA-Spectrum-2024-11-02T15-02-08Z.json" },
+						{ "type": "file", "name": "message-HOSKY-ADA-SundaeSwap-2024-11-02T15-02-08Z.json" },
+						{ "type": "file", "name": "message-HOSKY-ADA-SundaeSwapV3-2024-11-02T15-02-08Z.json" },
+						{ "type": "file", "name": "message-HOSKY-ADA-WingRiders-2024-11-02T15-02-08Z.json" },
+						{ "type": "file", "name": "message-HOSKY-ADA-WingRidersV2-2024-11-02T15-02-08Z.json" },
+						{ "type": "file", "name": "validation-HOSKY-ADA-2024-11-02T15-03-04Z.json" },
+						{ "type": "file", "name": "version-orcfax-price-feed-schema-v3.json" }
+					]
+				},
+				{ "type": "file", "name": "manifest-sha256.txt" },
+				{ "type": "file", "name": "manifest-sha512.txt" },
+				{ "type": "file", "name": "tagmanifest-sha256.txt" },
+				{ "type": "file", "name": "tagmanifest-sha512.txt" }
+			]
+		}
+	]
+}

@@ -1,38 +1,34 @@
-# create-svelte
+# Orcfax Archive Viewer
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Orcfax Archive Viewer is a Svelte app that compiles everything needed to explore a single Orcfax Fact Statement archive from Arweave into a single static index.html file that is intended to be used locally and offline.
 
-## Creating a project
+This app's sole purpose is to compile the static index.html file, which is packaged along with the orcfax explorer as a static asset so that it can be downloaded and packaged along with a full Fact Statement archive folder which is fetched from Arweave.
 
-If you're seeing this, you've probably already done this step. Congrats!
+The viewer does not access the folder of archived files directly, instead, on download from the Explorer, a JSON representation of the archive's contents are injected into a global window variable so it can be used internally.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+An example JSON file is included in the repo for local development purposes.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've cloned the repo and installed dependencies with `pnpm i`, start a development server:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm run dev
 ```
+
+To run the viewer with local test data, copy the contents of `example-archive.json` and paste it in place of `'DATA_PLACEHOLDER'` at the bottom of `/index.html` located at the project's root.
 
 ## Building
 
-To create a production version of your app:
-
+Before creating a new build, it is recommended to run formatting and linting first:
 ```bash
-npm run build
+pnpm run format
+pnpm run lint
 ```
 
-You can preview the production build with `npm run preview`.
+To create a new production version of the viewer, run:
+```bash
+pnpm run build
+```
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+After building, you will see `index.html` under the build folder. The contents of this file are then to be copied and pasted over the contents of `/static/archive-viewer.html` in the [Explorer](https://github.com/orcfax/explorer.orcfax.io/blob/main/static/archive-viewer.html).
