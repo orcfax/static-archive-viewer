@@ -10,17 +10,19 @@ An example JSON file is included in the repo for local development purposes.
 
 ## Developing
 
-Once you've cloned the repo and installed dependencies with `pnpm i`, start a development server:
+Clone the repository and install the dependencies:
 
-```bash
-pnpm run dev
+```sh
+git clone git@github.com:orcfax/orcfax-archive-viewer.git
+cd orcfax-archive-viewer
+pnpm i
 ```
-
-To run the viewer with local test data, copy the contents of `example-archive.json` and paste it in place of `'DATA_PLACEHOLDER'` at the bottom of `/index.html` located at the project's root.
 
 ## Building
 
-Before creating a new build, it is recommended to run formatting and linting first:
+To run the viewer with local test data, copy the contents of `example-archive.json` and paste it in place of `'DATA_PLACEHOLDER'` (NB. replace the single-quotation marks as well) at the bottom of `/index.html` located at the root of this repository.
+
+Once you have replaced the `'DATA_PLACEHOLDER'` (including quotes) it is recommended to run formatting and linting first. This will prettify the source data.
 
 ```bash
 pnpm run format
@@ -33,4 +35,14 @@ To create a new production version of the viewer, run:
 pnpm run build
 ```
 
-After building, you will see `index.html` under the build folder. The contents of this file are then to be copied and pasted over the contents of `/static/archive-viewer.html` in the [Explorer](https://github.com/orcfax/explorer.orcfax.io/blob/main/static/archive-viewer.html).
+After building, you will find `index.html` under the build folder.
+
+## Viewing
+
+Start a development server with:
+
+```bash
+pnpm run dev
+```
+
+The local archive will be visible at the server location and port on your localhost, e.g. `http://<localhost-ip>:<port>/`. Alternatively, open the `build/index.html` file in your choice of web-browser.
