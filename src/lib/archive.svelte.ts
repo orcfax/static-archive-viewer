@@ -43,7 +43,6 @@ export function getArchiveState() {
 // Archive Schemas and Types
 export const SourceSchema = z.object({
 	name: z.string(),
-	description: z.string(),
 	type: z.enum(['CEX API', 'DEX LP']),
 	website: z.string(),
 	// imagePath: z.string(), TODO: Add source SVGs
